@@ -9,6 +9,11 @@ const { detectBookingIntent } = require("./bookingIntent");
 const calendar = require("./calendar");
 
 const app = express();
+// Render (and its Cloudflare edge) sits in front of this app and sets
+// X-Forwarded-For on every request. Without this, express-rate-limit
+// throws on that header and crashes the process — see NOTES.md Stage 4.
+app.set("trust proxy", true);
+
 const PORT = process.env.PORT || 3000;
 const MODEL = "claude-haiku-4-5-20251001";
 const MAX_TOOL_ITERATIONS = 4;
