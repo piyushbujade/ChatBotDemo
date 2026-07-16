@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: chatbot-demo
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: free
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: PER_CLIENT_DAILY_MAX
+        value: "30"
+      - key: PER_IP_MAX_REQUESTS
+        value: "15"

@@ -1,0 +1,45 @@
+{
+  "businessName": "Acme Dental",
+  "greeting": "Hi! 👋 Ask me about Acme Dental's hours, appointments, pricing, or anything else.",
+  "persona": "You are a friendly, concise support assistant for Acme Dental, a family dental clinic. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": ["mon", "tue", "wed", "thu", "fri"],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": ["hours", "open", "opening", "close", "closing", "time", "weekend"],
+      "answer": "Acme Dental is open Monday to Thursday, 8am to 5pm, and Friday 8am to 2pm. We're closed weekends and public holidays."
+    },
+    {
+      "keywords": ["price", "pricing", "cost", "how much", "rates", "fee", "fees"],
+      "answer": "A standard checkup and cleaning starts at $120. Costs vary for fillings, whitening, and other procedures — happy to give you an estimate if you share what you need."
+    },
+    {
+      "keywords": ["service", "services", "offer", "provide", "do you do"],
+      "answer": "We offer general checkups, cleanings, fillings, whitening, and emergency dental care."
+    },
+    {
+      "keywords": ["contact", "email", "phone", "call", "reach", "number"],
+      "answer": "You can reach Acme Dental at hello@acmedental.example or (555) 987-6543."
+    },
+    {
+      "keywords": ["location", "address", "where", "based", "office"],
+      "answer": "Acme Dental is located at 45 Smile Avenue, Springfield."
+    },
+    {
+      "keywords": ["appointment", "book", "booking", "schedule", "meeting", "demo"],
+      "answer": "You can book an appointment by telling me a day and time that works for you this week, and I'll check availability."
+    },
+    {
+      "keywords": ["insurance", "coverage", "covered"],
+      "answer": "We accept most major dental insurance plans — bring your insurance card to your first visit and we'll verify coverage."
+    },
+    {
+      "keywords": ["human", "agent", "representative", "someone", "person", "talk to"],
+      "answer": "Of course — share your name and email and someone from our front desk team will follow up shortly."
+    }
+  ]
+}

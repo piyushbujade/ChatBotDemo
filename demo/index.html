@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chatbot Demo</title>
+<style>
+  :root {
+    --bg: #f2f4f7;
+    --panel-bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --wa-green: #075e54;
+    --wa-bubble-in: #ffffff;
+    --wa-bubble-out: #dcf8c6;
+    --ig-purple: #833ab4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .tab-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--panel-bg);
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .tab-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .phone {
+    width: 380px;
+    max-width: 100%;
+    height: 640px;
+    background: var(--panel-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+  }
+  .phone.active { display: flex; }
+
+  /* --- Website Widget (functional) --- */
+  .widget-header {
+    background: var(--accent);
+    color: white;
+    padding: 16px;
+    font-weight: 600;
+  }
+  .widget-header .status { font-weight: 400; font-size: 12px; opacity: 0.85; }
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .msg {
+    max-width: 78%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  .msg.bot {
+    background: #f0f1f5;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .msg.user {
+    background: var(--accent);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  .msg.typing { color: var(--muted); font-style: italic; }
+  .input-row {
+    display: flex;
+    border-top: 1px solid var(--border);
+    padding: 10px;
+    gap: 8px;
+  }
+  .input-row input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 14px;
+    outline: none;
+  }
+  .input-row button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0 18px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .input-row button:disabled,
+  .wa-input button:disabled,
+  .ig-input button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* --- WhatsApp skin --- */
+  .wa-header {
+    background: var(--wa-green);
+    color: white;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wa-header .avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: #25d366;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600;
+  }
+  .wa-body {
+    flex: 1;
+    background: #e5ddd5;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .wa-bubble {
+    max-width: 78%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+  }
+  .wa-bubble.in { background: var(--wa-bubble-in); align-self: flex-start; }
+  .wa-bubble.out { background: var(--wa-bubble-out); align-self: flex-end; }
+  .wa-input {
+    padding: 10px;
+    background: #f0f0f0;
+    display: flex;
+    gap: 8px;
+  }
+  .wa-input input {
+    flex: 1;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .wa-input button {
+    background: var(--wa-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    cursor: pointer;
+  }
+
+  /* --- Instagram skin --- */
+  .ig-header {
+    background: white;
+    color: var(--text);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ig-header .avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  .ig-body {
+    flex: 1;
+    background: white;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ig-bubble {
+    max-width: 78%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    font-size: 14px;
+  }
+  .ig-bubble.in { background: #efefef; align-self: flex-start; }
+  .ig-bubble.out { background: var(--ig-purple); color: white; align-self: flex-end; }
+  .ig-input {
+    padding: 10px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+  }
+  .ig-input input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .ig-input button {
+    background: var(--ig-purple);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+
+  .skin-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px;
+    background: #fafafa;
+    border-top: 1px dashed var(--border);
+  }
+
+  /* --- Business view: calendar + notifications (always visible) --- */
+  .business-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 28px;
+    width: 100%;
+    max-width: 780px;
+  }
+  .business-card {
+    flex: 1 1 340px;
+    background: var(--panel-bg);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 16px;
+  }
+  .business-card h2 {
+    font-size: 14px;
+    margin: 0 0 12px;
+  }
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 6px;
+    font-size: 11px;
+  }
+  .calendar-day-label {
+    font-weight: 600;
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .calendar-slot {
+    padding: 4px 2px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .calendar-slot.available { background: #e6f4ea; color: #1a7a3c; }
+  .calendar-slot.booked { background: #f3f3f3; color: var(--muted); text-decoration: line-through; }
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    max-height: 260px;
+    overflow-y: auto;
+  }
+  .activity-item {
+    padding: 8px 10px;
+    background: #f7f7fb;
+    border-radius: 8px;
+  }
+  .activity-time {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .activity-empty {
+    color: var(--muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Chatbot Demo</h1>
+<div class="subtitle">Same chatbot everywhere — WhatsApp and Instagram are just different visual skins on top of the Website Widget backend.</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="widget">Website Widget</button>
+  <button class="tab-btn" data-tab="whatsapp">WhatsApp</button>
+  <button class="tab-btn" data-tab="instagram">Instagram</button>
+</div>
+
+<!-- Website Widget skin -->
+<div class="phone active" id="panel-widget">
+  <div class="widget-header">
+    <span id="widget-header-name">Chat with us</span>
+    <div class="status">Online now</div>
+  </div>
+  <div class="messages" id="list-widget"></div>
+  <div class="input-row">
+    <input type="text" class="chat-input" data-skin="widget" placeholder="Type a message..." />
+    <button class="send-btn" data-skin="widget">Send</button>
+  </div>
+</div>
+
+<!-- WhatsApp skin -->
+<div class="phone" id="panel-whatsapp">
+  <div class="wa-header">
+    <div class="avatar" id="wa-avatar-letter">B</div>
+    <div>
+      <div id="wa-header-name">Business Name</div>
+      <div style="font-size:12px; opacity:0.85;">online</div>
+    </div>
+  </div>
+  <div class="wa-body" id="list-whatsapp"></div>
+  <div class="wa-input">
+    <input type="text" class="chat-input" data-skin="whatsapp" placeholder="Type a message" />
+    <button class="send-btn" data-skin="whatsapp">➤</button>
+  </div>
+  <div class="skin-note">Same chatbot as the Website Widget — styled to preview a WhatsApp look.</div>
+</div>
+
+<!-- Instagram skin -->
+<div class="phone" id="panel-instagram">
+  <div class="ig-header">
+    <div class="avatar"></div>
+    <div id="ig-header-name">business_name</div>
+  </div>
+  <div class="ig-body" id="list-instagram"></div>
+  <div class="ig-input">
+    <input type="text" class="chat-input" data-skin="instagram" placeholder="Message..." />
+    <button class="send-btn" data-skin="instagram">Send</button>
+  </div>
+  <div class="skin-note">Same chatbot as the Website Widget — styled to preview an Instagram DM look.</div>
+</div>
+
+<!-- Business view: always visible, regardless of which chat skin tab is active -->
+<div class="business-view">
+  <div class="business-card">
+    <h2>This Week's Availability</h2>
+    <div class="calendar-grid" id="calendar-grid">Loading…</div>
+  </div>
+  <div class="business-card">
+    <h2>Business Notifications</h2>
+    <div class="activity-list" id="activity-list">Loading…</div>
+  </div>
+</div>
+
+<script>
+  // --- Tab switching ---
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const panels = {
+    widget: document.getElementById("panel-widget"),
+    whatsapp: document.getElementById("panel-whatsapp"),
+    instagram: document.getElementById("panel-instagram")
+  };
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      Object.values(panels).forEach((p) => p.classList.remove("active"));
+      panels[btn.dataset.tab].classList.add("active");
+    });
+  });
+
+  // --- Shared chat logic across all three skins ---
+  const lists = {
+    widget: document.getElementById("list-widget"),
+    whatsapp: document.getElementById("list-whatsapp"),
+    instagram: document.getElementById("list-instagram")
+  };
+  const inputEls = document.querySelectorAll(".chat-input");
+  const sendBtns = document.querySelectorAll(".send-btn");
+
+  const bubbleClass = {
+    widget: { user: "msg user", assistant: "msg bot" },
+    whatsapp: { user: "wa-bubble out", assistant: "wa-bubble in" },
+    instagram: { user: "ig-bubble out", assistant: "ig-bubble in" }
+  };
+
+  // clientId comes from the cold-email link (?client=acme-dental) and is
+  // sent with every /api/chat request so the server loads that business's config.
+  const clientId = new URLSearchParams(window.location.search).get("client") || "";
+
+  // history holds the full shared conversation; anthropicHistory is the
+  // subset (role/content only) sent to the API on each request.
+  let history = [];
+  let typingActive = false;
+
+  function renderAll() {
+    Object.keys(lists).forEach((skin) => {
+      const container = lists[skin];
+      container.innerHTML = "";
+      history.forEach((entry) => {
+        const div = document.createElement("div");
+        div.className = bubbleClass[skin][entry.role];
+        div.textContent = entry.text;
+        container.appendChild(div);
+      });
+      if (typingActive) {
+        const typingDiv = document.createElement("div");
+        typingDiv.className = bubbleClass[skin].assistant + " typing";
+        typingDiv.textContent = "Typing...";
+        container.appendChild(typingDiv);
+      }
+      container.scrollTop = container.scrollHeight;
+    });
+  }
+
+  function setInputsEnabled(enabled) {
+    inputEls.forEach((el) => (el.disabled = !enabled));
+    sendBtns.forEach((el) => (el.disabled = !enabled));
+  }
+
+  async function refreshCalendar() {
+    const grid = document.getElementById("calendar-grid");
+    try {
+      const res = await fetch("/api/calendar?client=" + encodeURIComponent(clientId));
+      if (!res.ok) throw new Error("failed");
+      const data = await res.json();
+
+      grid.innerHTML = "";
+      if (!data.days || data.days.length === 0) {
+        grid.textContent = "No availability configured.";
+        return;
+      }
+      data.days.forEach((day) => {
+        const col = document.createElement("div");
+        const label = document.createElement("div");
+        label.className = "calendar-day-label";
+        const d = new Date(day.date + "T00:00:00");
+        label.textContent = d.toLocaleDateString(undefined, { weekday: "short", month: "numeric", day: "numeric" });
+        col.appendChild(label);
+        day.slots.forEach((slot) => {
+          const el = document.createElement("div");
+          el.className = "calendar-slot " + (slot.booked ? "booked" : "available");
+          el.textContent = slot.time;
+          col.appendChild(el);
+        });
+        grid.appendChild(col);
+      });
+    } catch (err) {
+      grid.textContent = "Couldn't load availability.";
+    }
+  }
+
+  async function refreshActivity() {
+    const list = document.getElementById("activity-list");
+    try {
+      const res = await fetch("/api/activity?client=" + encodeURIComponent(clientId));
+      if (!res.ok) throw new Error("failed");
+      const data = await res.json();
+
+      list.innerHTML = "";
+      if (!data.events || data.events.length === 0) {
+        list.innerHTML = '<div class="activity-empty">No activity yet — bookings made in the chat will show up here.</div>';
+        return;
+      }
+      data.events.forEach((event) => {
+        const item = document.createElement("div");
+        item.className = "activity-item";
+        const msg = document.createElement("div");
+        msg.textContent = event.message;
+        const time = document.createElement("span");
+        time.className = "activity-time";
+        time.textContent = new Date(event.timestamp).toLocaleString();
+        item.appendChild(msg);
+        item.appendChild(time);
+        list.appendChild(item);
+      });
+    } catch (err) {
+      list.textContent = "Couldn't load notifications.";
+    }
+  }
+
+  async function sendMessage(text) {
+    text = text.trim();
+    if (!text) return;
+
+    history.push({ role: "user", text });
+    setInputsEnabled(false);
+    typingActive = true;
+    renderAll();
+
+    const anthropicHistory = history
+      .slice(0, -1)
+      .map((entry) => ({ role: entry.role, content: entry.text }));
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, history: anthropicHistory, clientId })
+      });
+      const data = await res.json();
+
+      typingActive = false;
+
+      if (!res.ok) {
+        history.push({ role: "assistant", text: data.error || "Something went wrong. Please try again." });
+        renderAll();
+        return;
+      }
+
+      history.push({ role: "assistant", text: data.reply });
+      renderAll();
+      refreshCalendar();
+      refreshActivity();
+    } catch (err) {
+      typingActive = false;
+      history.push({ role: "assistant", text: "Couldn't reach the server. Is it running?" });
+      renderAll();
+    } finally {
+      setInputsEnabled(true);
+    }
+  }
+
+  sendBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const input = document.querySelector('.chat-input[data-skin="' + btn.dataset.skin + '"]');
+      const text = input.value;
+      input.value = "";
+      sendMessage(text);
+    });
+  });
+  inputEls.forEach((input) => {
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const text = input.value;
+        input.value = "";
+        sendMessage(text);
+      }
+    });
+  });
+
+  async function init() {
+    let businessName = "Our Business";
+    let greeting = "Hi! 👋 Ask me about our hours, pricing, services, or anything else.";
+
+    try {
+      const res = await fetch("/api/client-config?client=" + encodeURIComponent(clientId));
+      if (res.ok) {
+        const config = await res.json();
+        if (config.businessName) businessName = config.businessName;
+        if (config.greeting) greeting = config.greeting;
+      }
+    } catch (err) {
+      // fall back to the generic defaults above if this fails
+    }
+
+    document.getElementById("widget-header-name").textContent = "Chat with " + businessName;
+    document.getElementById("wa-header-name").textContent = businessName;
+    document.getElementById("wa-avatar-letter").textContent = businessName.charAt(0).toUpperCase();
+    document.getElementById("ig-header-name").textContent = businessName;
+
+    history = [{ role: "assistant", text: greeting }];
+    renderAll();
+
+    refreshCalendar();
+    refreshActivity();
+    setInterval(() => {
+      refreshCalendar();
+      refreshActivity();
+    }, 8000);
+  }
+
+  init();
+</script>
+
+</body>
+</html>

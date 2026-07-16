@@ -1,0 +1,49 @@
+{
+  "businessName": "Our Business",
+  "greeting": "Hi! 👋 Ask me about our hours, pricing, services, or anything else.",
+  "persona": "You are a friendly, concise support assistant for a small business website chat widget. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": ["mon", "tue", "wed", "thu", "fri"],
+    "startTime": "09:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": ["hours", "open", "opening", "close", "closing", "time", "weekend"],
+      "answer": "We're open Monday to Friday, 9am to 6pm, and Saturday 10am to 4pm. We're closed on Sundays and public holidays."
+    },
+    {
+      "keywords": ["price", "pricing", "cost", "how much", "rates", "fee", "fees"],
+      "answer": "Our pricing depends on the service you need. Most packages start at $49 and scale up based on scope — happy to give you an exact quote if you tell me more about what you're looking for."
+    },
+    {
+      "keywords": ["service", "services", "offer", "provide", "do you do"],
+      "answer": "We offer consulting, custom setup, and ongoing support packages. Let me know what you're trying to accomplish and I can point you to the right service."
+    },
+    {
+      "keywords": ["contact", "email", "phone", "call", "reach", "number"],
+      "answer": "You can reach us at hello@example.com or (555) 123-4567. Our team typically responds within one business day."
+    },
+    {
+      "keywords": ["location", "address", "where", "based", "office"],
+      "answer": "We're based at 123 Main Street, Suite 200, in your city — and we also work with clients remotely worldwide."
+    },
+    {
+      "keywords": ["appointment", "book", "booking", "schedule", "meeting", "demo"],
+      "answer": "You can book a time with us through the 'Schedule a Call' link on our site, or just tell me a few times that work for you and I'll help coordinate."
+    },
+    {
+      "keywords": ["refund", "cancel", "cancellation", "money back", "guarantee"],
+      "answer": "We offer a 14-day money-back guarantee on all new packages. To cancel or request a refund, just reach out to hello@example.com with your order details."
+    },
+    {
+      "keywords": ["payment", "pay", "credit card", "invoice", "billing"],
+      "answer": "We accept all major credit cards, PayPal, and bank transfer for larger packages. Invoices are sent by email and can be paid online."
+    },
+    {
+      "keywords": ["human", "agent", "representative", "someone", "person", "talk to"],
+      "answer": "Of course — I can connect you with a team member. Please share your name and email, and someone from our team will follow up shortly."
+    }
+  ]
+}
