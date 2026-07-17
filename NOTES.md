@@ -91,5 +91,45 @@
 
 **Stage 3 fully verified — the app is now feature-complete for the local demo (Stages 1–3). Next up is Stage 4 (hosting), not started, needs explicit go-ahead.**
 
-## Stage 4 (not started): Hosting
-Render free tier for the cold-email demo link. Do not touch until the app is fully verified locally and the user explicitly says to move to hosting. Upgrade to isolated per-client instance only once someone pays.
+## Stage 4: Hosting on Render (free tier) — live ✅
+
+**Live URL:** https://chatbot-demo-oyvg.onrender.com — this + `?client=<slug>` is what goes in cold emails going forward.
+
+**Goal:** get the verified local demo behind a public URL on Render's free tier, per CLAUDE.md.
+
+**Built:**
+- Root-level `.gitignore` (`server/node_modules/`, `server/.env`, `.claude/`).
+- `server/package.json` — added `"engines": { "node": ">=18" }` to pin a compatible Node version on Render's build image.
+- `render.yaml` (project root) — Render Blueprint: `rootDir: server`, `buildCommand: npm install`, `startCommand: node index.js`, free plan, `ANTHROPIC_API_KEY` set with `sync: false` so it's entered via the Render dashboard and never stored in the repo.
+- Local git repo initialized at project root, first commit reviewed file-by-file before staging (confirmed `server/.env` and `node_modules/` excluded, `.env.example` stays blank) — pushed to a private GitHub repo (`github.com/piyushbujade/ChatBotDemo`), then deployed via Render's Blueprint flow.
+
+**🚧 Production bug found & fixed:** immediately after first deploy, the live site was flapping — roughly 40% of *all* requests (including the plain static homepage) returned a platform-level `404 no-server` from Render's edge, completely at random. Diagnosed via the user pulling Render's live logs (I have no dashboard/log access), which showed:
+```
+ValidationError: The 'X-Forwarded-For' header is set but the Express 'trust proxy' setting is false (default)...
+code: 'ERR_ERL_UNEXPECTED_X_FORWARDED_FOR'
+```
+`express-rate-limit` v7 refuses to run behind a reverse proxy (Render + its Cloudflare edge, which set `X-Forwarded-For` on every request) unless Express's `trust proxy` is configured. The error was an unhandled rejection inside the rate-limiter middleware, which **crashed the entire Node process on every `/api/chat` request** — explaining why even unrelated routes failed intermittently (they were caught in the crash/restart cycle, not broken themselves). Fixed with one line in `server/index.js`: `app.set("trust proxy", true)`, right after the `app` is created. Committed, pushed, Render auto-redeployed. Verified fixed: 5 consecutive rapid `/api/chat` calls all succeeded post-fix (would have crashed the old code almost immediately).
+
+**Verification (against the live URL, post-fix):**
+- Default vs `acme-dental` FAQ answers correctly differ.
+- `/api/client-config` personalizes correctly.
+- `/api/calendar` generates the correct current week.
+- `/api/activity` correctly empty on a fresh deploy (in-memory, as designed).
+- Booking flow initiates correctly ("I want to book an appointment" → asks for day/time naturally).
+
+**Known limitations (by design, not bugs):**
+- Render free tier spins down after ~15 min idle; first request after that takes ~30-50s to cold-start. A cold-emailed lead's first message might feel slow.
+- All in-memory state (daily message counts, calendar bookings, activity log) resets on every restart/redeploy — same "no persistence" design as local, just triggered more often by Render's free-tier idling.
+- New client configs must be committed + pushed to `server/clients/` (not just saved locally) for leads to get personalized links in production.
+
+**Explicit stop point:** this stage ends here. Upgrading to an isolated per-client paid instance (per CLAUDE.md) is out of scope until someone pays.
+
+## Post-Stage-4 fix: raw markdown showing in chat bubbles
+
+**Bug:** Claude occasionally wrote markdown (`**bold**`) in replies, but the chat UI renders messages as plain text (`div.textContent`, by design — avoids any risk of rendering raw HTML from the model). Result: literal `**` asterisks visible in the bubble instead of bold text.
+
+**Options considered:** (1) instruct Claude to never use markdown, plain text only; (2) render markdown client-side into safe HTML (escape-then-convert, to avoid a prompt-injection-driven XSS path). Discussed the tradeoff with the user — richer formatting vs. more code/new attack surface. **Decision: option 1** — simplest, zero new code surface, no XSS risk to reason about, matches the "simple to start" approach.
+
+**Fix:** added one line to the system prompt in `server/index.js` (always included, not just when booking tools are active): *"Reply in plain text only — no markdown. Never use **bold**, _italics_, backticks, bullet points with - or *, or # headers; the chat widget displays raw text, so markdown symbols would show up literally instead of being formatted."*
+
+**Verified locally:** re-tested the exact question that previously produced `**bold**` (acme-dental hours) 3x — clean every time. Also tested a booking-rejection reply and a multi-topic FAQ answer (services + payment, the kind of question that invites bullet lists) — no markdown in either. Pushed to production.

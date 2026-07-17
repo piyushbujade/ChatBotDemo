@@ -175,6 +175,7 @@ app.post("/api/chat", chatRateLimiter, async (req, res) => {
 
   const systemPrompt = [
     config.persona,
+    "Reply in plain text only — no markdown. Never use **bold**, _italics_, backticks, bullet points with - or *, or # headers; the chat widget displays raw text, so markdown symbols would show up literally instead of being formatted.",
     faqMatches.length > 0
       ? `Relevant business FAQ info that may help answer this message:\n- ${faqMatches.join("\n- ")}`
       : "No specific FAQ entry matched this message — answer helpfully using general knowledge, and offer to connect the user with a human for anything business-specific you can't confirm.",
