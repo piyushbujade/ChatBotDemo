@@ -99,6 +99,21 @@ function isInPast(dateStr, timeStr) {
   return slotDate.getTime() < Date.now();
 }
 
+// Public-facing view for the calendar widget: same window, but with
+// already-passed times left out entirely (only ever affects today's
+// date — future days have no past times) rather than shown as "booked".
+function getPublicCalendar(clientId, businessHours) {
+  const cal = ensureCalendar(clientId, businessHours);
+  return {
+    days: cal.days.map((day) => ({
+      date: day.date,
+      slots: day.slots
+        .filter((s) => !isInPast(day.date, s.time))
+        .map((s) => ({ time: s.time, booked: s.booked }))
+    }))
+  };
+}
+
 function checkAvailability(clientId, businessHours, dateStr) {
   const cal = ensureCalendar(clientId, businessHours);
 
@@ -122,7 +137,11 @@ function checkAvailability(clientId, businessHours, dateStr) {
 
   const open = day.slots.filter((s) => !s.booked && !isInPast(day.date, s.time));
   if (open.length === 0) {
-    return { isError: false, content: `No open slots on ${dateStr} — it's fully booked or already passed.` };
+    const remainingToday = day.slots.filter((s) => !isInPast(day.date, s.time));
+    if (remainingToday.length === 0) {
+      return { isError: false, content: `There are no more bookable times on ${dateStr} — that day's hours have ended. Try a different day.` };
+    }
+    return { isError: false, content: `All remaining times on ${dateStr} are already booked. Try a different day.` };
   }
   return { isError: false, content: `Available on ${dateStr}: ${open.map((s) => s.time).join(", ")}` };
 }
@@ -144,7 +163,11 @@ function bookAppointment(clientId, businessHours, dateStr, timeStr, name) {
     return { isError: true, content: `${timeStr} is not a valid slot time on ${dateStr}.` };
   }
   if (isInPast(dateStr, timeStr)) {
-    return { isError: true, content: `${dateStr} ${timeStr} has already passed.` };
+    const remainingToday = day.slots.filter((s) => !s.booked && !isInPast(day.date, s.time));
+    return {
+      isError: true,
+      content: `${timeStr} on ${dateStr} has already passed — it was not booked by anyone, that time has simply gone by. ${remainingToday.length > 0 ? `Later times still open that day: ${remainingToday.map((s) => s.time).join(", ")}.` : "No more bookable times remain that day — try a different day."}`
+    };
   }
   if (slot.booked) {
     const open = day.slots.filter((s) => !s.booked && !isInPast(day.date, s.time)).map((s) => s.time);
@@ -175,6 +198,7 @@ function getActivity(clientId) {
 module.exports = {
   DEFAULT_BUSINESS_HOURS,
   ensureCalendar,
+  getPublicCalendar,
   checkAvailability,
   bookAppointment,
   logActivity,

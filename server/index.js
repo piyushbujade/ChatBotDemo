@@ -130,13 +130,7 @@ app.get("/api/calendar", (req, res) => {
     ? req.query.client
     : "default";
   const config = loadClientConfig(clientId);
-  const cal = calendar.ensureCalendar(clientId, config.businessHours);
-
-  const days = cal.days.map((day) => ({
-    date: day.date,
-    slots: day.slots.map((s) => ({ time: s.time, booked: s.booked }))
-  }));
-  res.json({ days });
+  res.json(calendar.getPublicCalendar(clientId, config.businessHours));
 });
 
 app.get("/api/activity", (req, res) => {
@@ -190,7 +184,7 @@ app.post("/api/chat", chatRateLimiter, async (req, res) => {
       ? `Relevant business FAQ info that may help answer this message:\n- ${faqMatches.join("\n- ")}`
       : "No specific FAQ entry matched this message — answer helpfully using general knowledge, and offer to connect the user with a human for anything business-specific you can't confirm.",
     useBookingTools
-      ? `Today's date is ${calendar.formatDate(new Date())}. You have no way of knowing which dates are bookable except by calling check_availability or book_appointment — you do not know the bookable range, so never state or imply a date is unavailable, out of range, or too far out based on your own reasoning. For ANY specific date the user mentions, immediately call check_availability or book_appointment with that exact date and relay exactly what the tool returns, whether it succeeds or fails.`
+      ? `Today's date is ${calendar.formatDate(new Date())}. You have no way of knowing which dates or times are bookable, or why one isn't, except by calling check_availability or book_appointment — never state, imply, or invent a reason a date/time is unavailable (e.g. do not say things like "same-day bookings aren't supported" or "that's out of range") unless it is exactly what the tool told you. Whenever the user mentions any date or time — including relative ones like "today", "tomorrow", or a weekday name — convert it to an exact YYYY-MM-DD and immediately call check_availability or book_appointment with it, then relay exactly what the tool returns, whether it succeeds or fails.`
       : null
   ].filter(Boolean).join("\n\n");
 
