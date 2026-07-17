@@ -9,10 +9,15 @@ const { detectBookingIntent } = require("./bookingIntent");
 const calendar = require("./calendar");
 
 const app = express();
-// Render (and its Cloudflare edge) sits in front of this app and sets
-// X-Forwarded-For on every request. Without this, express-rate-limit
-// throws on that header and crashes the process — see NOTES.md Stage 4.
-app.set("trust proxy", true);
+// Render sits in front of this app as a single reverse-proxy hop and sets
+// X-Forwarded-For on every request. Without any trust proxy setting,
+// express-rate-limit throws on that header and crashes the process (see
+// NOTES.md Stage 4). `true` "fixed" that but trusts every hop
+// unconditionally, letting a client spoof X-Forwarded-For to fake any IP
+// and bypass the per-IP rate limit entirely — express-rate-limit flags
+// this itself (ERR_ERL_PERMISSIVE_TRUST_PROXY). `1` trusts exactly one
+// hop, which is correct for Render's setup.
+app.set("trust proxy", 1);
 
 const PORT = process.env.PORT || 3000;
 const MODEL = "claude-haiku-4-5-20251001";
@@ -28,11 +33,11 @@ const PER_CLIENT_DAILY_MAX = Number(process.env.PER_CLIENT_DAILY_MAX) || 30;
 const BOOKING_TOOLS = [
   {
     name: "check_availability",
-    description: "Check open appointment slots for this business. Only the current week (Mon-Fri) is bookable. Omit 'date' to get a summary across the whole week.",
+    description: "Check open appointment slots for this business. Only the next 7 days from today are bookable (weekends excluded). Omit 'date' to get a summary across all upcoming bookable days.",
     input_schema: {
       type: "object",
       properties: {
-        date: { type: "string", description: "Date to check in YYYY-MM-DD format, must be within the current week. Optional." }
+        date: { type: "string", description: "Date to check in YYYY-MM-DD format, must be within the next 7 days. Optional." }
       }
     }
   },
@@ -42,7 +47,7 @@ const BOOKING_TOOLS = [
     input_schema: {
       type: "object",
       properties: {
-        date: { type: "string", description: "YYYY-MM-DD, must be within the current week" },
+        date: { type: "string", description: "YYYY-MM-DD, must be within the next 7 days from today" },
         time: { type: "string", description: "24-hour HH:MM matching one of the business's slot times" },
         name: { type: "string", description: "Customer's name for the booking" }
       },
@@ -92,11 +97,16 @@ function checkClientDailyLimit(clientId) {
 }
 
 function executeTool(clientId, businessHours, toolName, input) {
+  console.log(`[tool] ${toolName} input=${JSON.stringify(input)}`);
   if (toolName === "check_availability") {
-    return calendar.checkAvailability(clientId, businessHours, input.date);
+    const result = calendar.checkAvailability(clientId, businessHours, input.date);
+    console.log(`[tool] check_availability result=${JSON.stringify(result)}`);
+    return result;
   }
   if (toolName === "book_appointment") {
-    return calendar.bookAppointment(clientId, businessHours, input.date, input.time, input.name);
+    const result = calendar.bookAppointment(clientId, businessHours, input.date, input.time, input.name);
+    console.log(`[tool] book_appointment result=${JSON.stringify(result)}`);
+    return result;
   }
   return { isError: true, content: `Unknown tool: ${toolName}` };
 }
@@ -180,7 +190,7 @@ app.post("/api/chat", chatRateLimiter, async (req, res) => {
       ? `Relevant business FAQ info that may help answer this message:\n- ${faqMatches.join("\n- ")}`
       : "No specific FAQ entry matched this message — answer helpfully using general knowledge, and offer to connect the user with a human for anything business-specific you can't confirm.",
     useBookingTools
-      ? `Today's date is ${calendar.formatDate(new Date())}. You can check and book appointments using the available tools, but only within the current week (Monday-Friday). If asked about a date outside this week, explain that only this week is bookable.`
+      ? `Today's date is ${calendar.formatDate(new Date())}. You have no way of knowing which dates are bookable except by calling check_availability or book_appointment — you do not know the bookable range, so never state or imply a date is unavailable, out of range, or too far out based on your own reasoning. For ANY specific date the user mentions, immediately call check_availability or book_appointment with that exact date and relay exactly what the tool returns, whether it succeeds or fails.`
       : null
   ].filter(Boolean).join("\n\n");
 

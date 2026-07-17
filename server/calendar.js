@@ -1,9 +1,14 @@
-// Simulated, per-client, current-week-only appointment calendar.
-// In-memory only — clears on server restart, regenerates automatically
-// when the current week changes. No persistence, matches the rest of
-// this demo's "simple to start" approach.
+// Simulated, per-client, rolling-window appointment calendar: bookable
+// days are the next WINDOW_DAYS_AHEAD calendar days from today (inclusive),
+// filtered to the business's open days. E.g. if today is Saturday, the
+// window still reaches forward into next week's business days instead of
+// going empty — a fixed Mon-Sun calendar week would do that. In-memory
+// only — clears on server restart; per-day slots persist across the daily
+// window recompute so existing bookings aren't lost as the window rolls
+// forward, and stale (past) days are pruned.
 
 const WEEKDAY_CODES = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const WINDOW_DAYS_AHEAD = 7; // today + this many days, inclusive
 
 const DEFAULT_BUSINESS_HOURS = {
   days: ["mon", "tue", "wed", "thu", "fri"],
@@ -12,7 +17,7 @@ const DEFAULT_BUSINESS_HOURS = {
   slotMinutes: 60
 };
 
-const calendars = new Map(); // clientId -> { weekKey, days: [{date, slots}] }
+const calendarDays = new Map(); // clientId -> Map<dateStr, slots[]>
 const activityLogs = new Map(); // clientId -> entries[] (newest first)
 const MAX_ACTIVITY_ENTRIES = 50;
 
@@ -36,15 +41,6 @@ function minutesToTime(minutes) {
   return `${h}:${m}`;
 }
 
-function getCurrentWeekMonday(reference = new Date()) {
-  const d = new Date(reference);
-  const day = d.getDay(); // 0=Sun..6=Sat
-  const diff = day === 0 ? -6 : 1 - day;
-  d.setDate(d.getDate() + diff);
-  d.setHours(0, 0, 0, 0);
-  return d;
-}
-
 function generateSlots(businessHours) {
   const slots = [];
   const start = timeToMinutes(businessHours.startTime);
@@ -55,31 +51,47 @@ function generateSlots(businessHours) {
   return slots;
 }
 
-function generateWeekDays(monday, businessHours) {
-  const days = [];
-  for (let i = 0; i < 7; i++) {
-    const d = new Date(monday);
+// The bookable date strings for today's rolling window, filtered to the
+// business's open weekdays. Pure function of "today" — does not touch
+// any stored state.
+function getWindowDates(businessHours, reference = new Date()) {
+  const start = new Date(reference);
+  start.setHours(0, 0, 0, 0);
+
+  const dates = [];
+  for (let i = 0; i <= WINDOW_DAYS_AHEAD; i++) {
+    const d = new Date(start);
     d.setDate(d.getDate() + i);
     const code = WEEKDAY_CODES[d.getDay()];
     if (!businessHours.days.includes(code)) continue;
-    days.push({ date: formatDate(d), slots: generateSlots(businessHours) });
+    dates.push(formatDate(d));
   }
-  return days;
+  return dates;
 }
 
 function ensureCalendar(clientId, businessHours) {
   const hours = businessHours || DEFAULT_BUSINESS_HOURS;
-  const monday = getCurrentWeekMonday();
-  const weekKey = formatDate(monday);
+  if (!calendarDays.has(clientId)) calendarDays.set(clientId, new Map());
+  const dayMap = calendarDays.get(clientId);
 
-  const existing = calendars.get(clientId);
-  if (existing && existing.weekKey === weekKey) {
-    return existing;
+  const windowDates = getWindowDates(hours);
+
+  // Create slots for any window date we haven't seen yet — existing days
+  // (including any bookings on them) are left untouched.
+  for (const dateStr of windowDates) {
+    if (!dayMap.has(dateStr)) {
+      dayMap.set(dateStr, generateSlots(hours));
+    }
   }
 
-  const cal = { weekKey, days: generateWeekDays(monday, hours) };
-  calendars.set(clientId, cal);
-  return cal;
+  // Prune days that have fallen out of the window (yesterday and older)
+  // so this doesn't grow unbounded over a long-running process.
+  const todayStr = formatDate(new Date());
+  for (const dateStr of dayMap.keys()) {
+    if (dateStr < todayStr) dayMap.delete(dateStr);
+  }
+
+  return { days: windowDates.map((dateStr) => ({ date: dateStr, slots: dayMap.get(dateStr) })) };
 }
 
 function isInPast(dateStr, timeStr) {
@@ -96,7 +108,7 @@ function checkAvailability(clientId, businessHours, dateStr) {
       const times = open.slice(0, 4).map((s) => s.time).join(", ");
       return `${day.date}: ${open.length > 0 ? times : "fully booked"}`;
     });
-    return { isError: false, content: `Availability this week:\n${summary.join("\n")}` };
+    return { isError: false, content: `Upcoming availability:\n${summary.join("\n")}` };
   }
 
   const day = cal.days.find((d) => d.date === dateStr);
@@ -104,7 +116,7 @@ function checkAvailability(clientId, businessHours, dateStr) {
     const validDates = cal.days.map((d) => d.date).join(", ");
     return {
       isError: true,
-      content: `${dateStr} is not bookable — only this current week is available (${validDates}).`
+      content: `${dateStr} is not bookable — only these upcoming dates are available (${validDates}).`
     };
   }
 
@@ -123,7 +135,7 @@ function bookAppointment(clientId, businessHours, dateStr, timeStr, name) {
     const validDates = cal.days.map((d) => d.date).join(", ");
     return {
       isError: true,
-      content: `${dateStr} is not bookable — only this current week is available (${validDates}).`
+      content: `${dateStr} is not bookable — only these upcoming dates are available (${validDates}).`
     };
   }
 
