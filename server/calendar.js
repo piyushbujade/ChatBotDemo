@@ -8,6 +8,7 @@
 // forward, and stale (past) days are pruned.
 
 const WEEKDAY_CODES = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const WEEKDAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const WINDOW_DAYS_AHEAD = 7; // today + this many days, inclusive
 
 const DEFAULT_BUSINESS_HOURS = {
@@ -67,6 +68,17 @@ function getWindowDates(businessHours, reference = new Date()) {
     dates.push(formatDate(d));
   }
   return dates;
+}
+
+// "Weekday YYYY-MM-DD" for every bookable date, so callers (the system
+// prompt) can hand Claude an explicit lookup table instead of making it
+// compute which date a weekday name like "Monday" refers to — that
+// computation is exactly the kind of date arithmetic LLMs get wrong.
+function getBookableDatesWithWeekdays(businessHours) {
+  return getWindowDates(businessHours).map((dateStr) => {
+    const d = new Date(`${dateStr}T00:00:00`);
+    return `${WEEKDAY_NAMES[d.getDay()]} ${dateStr}`;
+  });
 }
 
 function ensureCalendar(clientId, businessHours) {
@@ -199,6 +211,7 @@ module.exports = {
   DEFAULT_BUSINESS_HOURS,
   ensureCalendar,
   getPublicCalendar,
+  getBookableDatesWithWeekdays,
   checkAvailability,
   bookAppointment,
   logActivity,
