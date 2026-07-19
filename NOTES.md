@@ -167,3 +167,9 @@ Also updated the "Upcoming Availability" widget's heading, which still said "Thi
 **Fix:** stopped relying on Claude to compute weekday-to-date mappings at all. Added `getBookableDatesWithWeekdays()` to `calendar.js`, which returns each bookable date paired with its real weekday (e.g. `"Monday 2026-07-20"`), and inject that full list directly into the system prompt whenever booking tools are active. The prompt now tells Claude to look up the exact date from this list rather than compute or guess it, and not to trust its own sense of what date a weekday falls on.
 
 **Verified:** booked all five weekdays by name only ("Book me for Monday/Tuesday/.../Friday at 11am") in one pass — every reply and every underlying tool call (confirmed via the `[tool]` log) matched the correct date (Mon→07-20 through Fri→07-24), with zero mismatches this time.
+
+## First real client configs added
+
+Added 19 real cold-email-lead configs to `server/clients/` — salons/spas in the Boise, ID area (e.g. `salon-chrome`, `divinely-polished`, `sport-clips-haircuts-of-southeast-boise`, full list in the commit). Before pushing: validated every file for valid JSON, required schema fields (`businessName`, `greeting`, `persona`, non-empty `faq`), `businessHours` present, filenames matching the `clientId` slug pattern (so they're actually reachable via `?client=<slug>`), and scanned for accidentally-embedded secrets — all clean. Pushed, Render redeployed, spot-checked several via `/api/client-config` and one full chat exchange (`salon-chrome`, pricing question) — content flows through correctly end-to-end.
+
+`acme-dental.json` (the throwaway test fixture from Stage 3) is still in the repo — worth deleting once these real clients are the only ones sent out, so it doesn't show up in any listing of "current clients."
