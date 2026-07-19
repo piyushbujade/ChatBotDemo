@@ -1,0 +1,105 @@
+{
+  "businessName": "Kiwi Blue Salon",
+  "greeting": "Hi! 👋 Welcome to Kiwi Blue Salon — ask me about our stylists, services, or booking an appointment.",
+  "persona": "You are a warm, upbeat assistant for Kiwi Blue Salon, a hair salon in Boise, Idaho founded in 2011 focused on quality hair care, skilled stylists, and a welcoming experience. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We'd love to share our exact hours with you — please ask us directly or leave your details and we'll confirm our current schedule for you."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing can vary depending on the stylist and service you choose. Let us know what you're looking for and we can point you in the right direction!"
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "Our stylists are skilled in a wide range of hair coloring and cutting techniques. Check out our Services page or ask us about something specific and we'll be happy to help."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Kiwi Blue Salon at (208) 488-4437."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 389 West Parkcenter Boulevard, Boise, Idaho 83706."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment right on our website, or tell me a day and time that works for you and I'll help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "stylist",
+        "stylists",
+        "hairdresser",
+        "team"
+      ],
+      "answer": "We've assembled some of the best stylists in the Treasure Valley, each skilled in a variety of coloring and cutting techniques. Visit our Stylists page to learn more about our team."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact info and someone from our salon team will follow up with you shortly."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "businessName": "Phenix Salon Suites",
+  "greeting": "Hi! 👋 Welcome to Phenix Salon Suites — ask me about our private suites, locations, or how to get started as a beauty professional.",
+  "persona": "You are a friendly, concise assistant for Phenix Salon Suites, a business offering private salon suites for cosmetologists, nail techs, massage therapists, estheticians, lash and PMU artists, barbers, and other beauty/wellness professionals in the Boise area. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Our suite professionals set their own hours since they run independent businesses, but our suites offer 24/7 access. Reach out and we can connect you with details for a specific location or provider."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Suite rental rates vary by location and size, and include perks like utilities, insurance, WIFI, and more. Share your name and contact info and our team will follow up with exact pricing."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We're home to cosmetologists, nail technicians, massage therapists, estheticians, lash and permanent makeup professionals, barbers, acupuncturists, and weight loss/body sculpting professionals. Each suite renter offers their own services independently."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Phenix Salon Suites Idaho at +1 (844) 873-2017 or letstalk@phenixsalonsuitesid.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We have two locations: Meridian Crossroads Shopping Center at 3909 E. Fairview Ave., Meridian, Idaho, and Northgate Shopping Center at 7054 W. State Street, Boise, Idaho."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo",
+        "tour"
+      ],
+      "answer": "We'd love to show you around with a no-obligation tour! Just share your name, email, and which location you're interested in, and our team will set up a time."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "Our suite rentals include cosmetology liability insurance as part of the package, along with utilities, WIFI, and more."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name, email, and phone number and someone from our team will follow up with you shortly."
+    },
+    {
+      "keywords": [
+        "rent",
+        "own business",
+        "independent",
+        "start",
+        "suite",
+        "private"
+      ],
+      "answer": "Our private suites let beauty and wellness professionals run their own independent business and keep 100% of what they earn, with support like continuing education, laundry, security, and more included. We'd love to give you a tour — just let us know your interest!"
+    }
+  ]
+}

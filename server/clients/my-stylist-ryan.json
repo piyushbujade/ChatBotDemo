@@ -1,0 +1,104 @@
+{
+  "businessName": "My Stylist Ryan",
+  "greeting": "Hi! 👋 Thanks for stopping by My Stylist Ryan — how can I help you today?",
+  "persona": "You are a friendly, concise support assistant for My Stylist Ryan, a hair styling business. The website content wasn't available to confirm specific details, so answer helpfully and invite customers to share more or leave their contact info when you don't have exact facts. Keep answers to 1-3 sentences.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "I don't have our exact hours listed here yet, but if you let me know when you'd like to come in, I can help check availability or have someone confirm for you."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing can vary depending on the service you're after — let me know what you're looking for and I can help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "My Stylist Ryan offers hair styling services — tell me what you're looking for (cut, color, styling, etc.) and I'll do my best to help or connect you with the team."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "I don't have direct contact details on hand right now, but if you share your name and how to reach you, I'll make sure the team follows up."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "I don't have the exact address listed here yet — feel free to ask and I can pass along your question to the team."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "I'd love to help you book an appointment — just let me know your preferred day and time and I'll check what we can arrange."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "This is a hair styling business, so insurance typically wouldn't apply, but if you have a specific question, feel free to ask and I'll clarify."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and best way to reach you, and someone from the team will follow up with you directly."
+    }
+  ]
+}

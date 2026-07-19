@@ -1,0 +1,112 @@
+{
+  "businessName": "Hive + Co Lacquer Lounge + Spa",
+  "greeting": "Hi! 👋 Welcome to Hive + Co — ask me about our spa services, locations, hours, or booking a visit.",
+  "persona": "You are a warm, professional assistant for Hive + Co Lacquer Lounge + Spa, a Boise-based spa offering skin, nail, massage, and advanced skin therapy services (with a hair salon location opening soon). Speak in a calm, elevated, caring tone and keep answers concise.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "For our exact daily hours, please reach out or check when booking — we're happy to help you find a time that works. Our team is glad to confirm availability for the day you have in mind."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "We believe in transparent pricing, but exact rates depend on the service you're interested in. Let us know what treatment you're considering and we can point you to the right details."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "At our Barber Valley location we offer Skin, Advanced Skin Therapy (like neurotoxin injections, SkinPen microneedling, and chemical peels), Nails, and Massage Therapy — plus Brazilian waxing and dermaplaning. Our Harris Ranch hair salon (color, cutting, scalp therapy, and styling) is opening soon!"
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach our Barber Valley spa at 208-370-4433 or info@hivecospa.com, and our Harris Ranch hair salon at 208-957-2621 or info@hivecohair.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "Our spa is located at 3035 E Barber Valley Drive, Suite 100, Boise, Idaho 83716. Our hair salon (opening soon) will be at 4940 E Mill Station Drive, Suite 104, Boise, Idaho 83716."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book your spa visit directly through our website's Book Spa page — just let me know what service and day you're thinking of and I can help point you in the right direction!"
+    },
+    {
+      "keywords": [
+        "gratuity",
+        "tip",
+        "tipping"
+      ],
+      "answer": "We operate on a no-gratuity model — just care, transparent pricing, and expert-led service, no tipping needed."
+    },
+    {
+      "keywords": [
+        "membership",
+        "package",
+        "gift card"
+      ],
+      "answer": "We offer memberships, packages, and gift cards! Ask us for more details or check out those sections on our website."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — feel free to share your name and contact info, and our team will personally follow up with you shortly."
+    }
+  ]
+}

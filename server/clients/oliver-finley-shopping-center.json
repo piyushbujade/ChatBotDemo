@@ -1,0 +1,118 @@
+{
+  "businessName": "Oliver Finley Academy of Cosmetology",
+  "greeting": "Hi! 👋 Ask me about Oliver Finley Academy's courses, salon appointments, or how to get started with a tour.",
+  "persona": "You are a friendly, concise assistant for Oliver Finley Academy of Cosmetology, a NACCAS-accredited beauty school in Boise, Idaho that also offers a student salon & spa. Answer clearly in 1-3 sentences, and encourage visitors to schedule a tour or book a salon appointment when relevant.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Our exact salon and school hours aren't listed here, but our team can confirm them for you — feel free to text (208) 658-1115 for salon hours or ask us here for school hours."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees",
+        "tuition"
+      ],
+      "answer": "For tuition and pricing details, we recommend checking our Net Price Calculator or reaching out to our Financial Aid Director, Lori Jensen, at (208) 363-6777."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do",
+        "courses",
+        "programs"
+      ],
+      "answer": "We offer courses in Esthetics, Cosmetology, and Nail Technology, all designed to promote individual artistry — no uniforms or single product line here! Click on any course on our site to learn more."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "For general school questions, contact James Lancaster, School Director, at (208) 363-6776 or james@oliverfinley.com. For salon appointments, text (208) 658-1115."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "campus"
+      ],
+      "answer": "Oliver Finley Academy is located at 6843 N. Strawberry Glen Rd, Suite 140, Boise, ID 83714."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "salon",
+        "spa"
+      ],
+      "answer": "To book a salon or spa appointment, just text (208) 658-1115 during normal salon hours with your preferred day/time and service type. All services are performed by students and supervised by licensed instructors."
+    },
+    {
+      "keywords": [
+        "tour",
+        "visit",
+        "campus life",
+        "feel"
+      ],
+      "answer": "We'd love to have you visit! You can schedule a campus tour through our website — just fill out the contact form and our Admissions team, Ryleigh & Kelsey, will be in touch."
+    },
+    {
+      "keywords": [
+        "financial aid",
+        "aid",
+        "attendance",
+        "launch program",
+        "idaho launch"
+      ],
+      "answer": "For questions about financial aid and attendance, contact Lori Jensen at (208) 363-6777 or Salina Lamica at (208) 363-6778."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and what you'd like help with, and our Admissions team (Ryleigh & Kelsey) or the right staff member will follow up with you shortly."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "businessName": "Le Chic Beauty LLC",
+  "greeting": "Hi! 💅 Welcome to Le Chic Beauty LLC — ask me about our lash, nail, and manicure services, hours, or booking!",
+  "persona": "You are a friendly, concise support assistant for Le Chic Beauty LLC, a nail and lash salon in Boise, ID. Answer clearly in 1-3 sentences unless more detail is truly needed, keeping a warm, beauty-industry tone.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "10:30",
+    "endTime": "18:30",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday, Tuesday, Thursday, and Friday from 10:30 AM to 6:30 PM, and Wednesday from 12:30 PM to 6:30 PM. We're closed Saturday and Sunday."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies by service — for example, our Anime Lash Extensions start at $60+ and our Volum Full Set / Fills start at $30+. Let me know what service you're interested in and I can share more details!"
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer a wide range of lash and nail services including lash extensions (Volum, Angel, Wet, Mega), Gel-X, manicures, pedicures, nail art, and more. Ask me about a specific service and I'll fill you in!"
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "The best way to reach us is through our Instagram or by booking online — feel free to share your info here and we'll get back to you!"
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 921 S Orchard St #205, Boise, ID 83705."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment by telling me a day and time that works for you, and I'll help point you in the right direction — or use our online booking page!"
+    },
+    {
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "reschedule",
+        "no show"
+      ],
+      "answer": "We require at least 48 hours' notice to cancel or reschedule, otherwise 100% of the service cost will be charged. You may reschedule up to 2 times before a full fee applies, and all deposits are non-refundable."
+    },
+    {
+      "keywords": [
+        "buy now pay later",
+        "payment plan",
+        "financing",
+        "afterpay"
+      ],
+      "answer": "Yes! We offer Buy Now, Pay Later for bookings between $50-$4,000, available in-person — you'll just need to get approved before your appointment."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact info and someone from our team will follow up with you shortly."
+    }
+  ]
+}

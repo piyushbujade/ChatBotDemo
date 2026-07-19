@@ -1,0 +1,124 @@
+{
+  "businessName": "Radiant Glow Esthetics",
+  "greeting": "Hi! 👋 Welcome to Radiant Glow Esthetics — ask me about our facials, waxing, brow, or lash services in Boise!",
+  "persona": "You are a warm, professional assistant for Radiant Glow Esthetics, a Boise, ID beauty spa specializing in eyebrow threading, waxing, facials, and lash/brow services. Keep answers friendly, concise, and inviting, in 1-3 sentences.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "10:00",
+    "endTime": "19:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday through Saturday, 10am to 7pm, and closed on Sundays."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies by service — for example, eyebrow threading is $12, a Brazilian wax is $45, and our Signature Facial is $99. Let me know what service you're interested in and I can give you the exact price!"
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer eyebrow threading and waxing, brow/lash tinting, lash lifts, brow lamination, facials, and full body waxing services."
+    },
+    {
+      "keywords": [
+        "biorepeel",
+        "peel",
+        "chemical peel",
+        "skin treatment"
+      ],
+      "answer": "We're currently offering the BioRePeelCl3 Treatment at a discounted price of $150 (originally $250) — a great option for glowing, refreshed skin! Call or text us to learn more."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach us at (208) 805-9308 or shweta.esthetic@gmail.com, or text us for the best availability."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 1843 South Broadway Avenue, Suite 202A, Boise, Idaho 83706 — in southeast Boise on Broadway Ave."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book by calling or texting us at (208) 805-9308, or share a day and time that works for you and we'll check availability."
+    },
+    {
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "no-show",
+        "no show",
+        "late"
+      ],
+      "answer": "We require 24-hour notice to cancel or reschedule. No-shows may be charged up to 80% of the service cost, and late cancellations (under 24 hrs) incur a 50% fee."
+    },
+    {
+      "keywords": [
+        "gift card",
+        "gift",
+        "voucher"
+      ],
+      "answer": "Yes! We offer gift cards for friends, family, or future visits, and the credits don't expire. Just ask us or check the Gift Cards section on our site."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact info and our team will follow up with you shortly, or you can call/text us directly at (208) 805-9308."
+    }
+  ]
+}

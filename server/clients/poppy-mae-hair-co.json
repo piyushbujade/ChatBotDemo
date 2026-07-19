@@ -1,0 +1,115 @@
+{
+  "businessName": "Poppy & Mae Hair Co",
+  "greeting": "Hi! 👋 Welcome to Poppy & Mae Hair Co — ask me about our services, hours, or booking an appointment.",
+  "persona": "You are a warm, friendly assistant for Poppy & Mae Hair Co, a full-service hair and beauty salon in Boise, ID. Speak with a welcoming, boutique-salon tone and keep answers concise (1-3 sentences).",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "08:00",
+    "endTime": "18:30",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday, Friday & Saturday 8am-6:30pm, Tuesday & Thursday 8am-5:30pm, and Wednesday 8am-5pm. We're closed on Sundays."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies by service — for example, a women's haircut starts at $50 and all-over custom color starts at $115+. Let me know which service you're interested in and I can share more details!"
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer haircuts, all-over color, blonding, balayage, highlights, extensions, facials, waxing, brow services, and more. Check out our full services list on the website or ask me about a specific one!"
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "The best way to reach us is through our website's contact page or by messaging us on Instagram. Share your name and question here and we'll be happy to help too!"
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 3050 N Lake Harbor Lane, Suite 118, Boise, ID 83703."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment right on our website — just pick a service and time that works for you! A deposit is required for most services to confirm your booking."
+    },
+    {
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "no show",
+        "reschedule"
+      ],
+      "answer": "If you cancel within 24 hours of your appointment, 50% of the service cost is owed; no-shows owe 100%. Appointments are marked as a no-show after 15 minutes, so please let us know as early as possible if you need to reschedule."
+    },
+    {
+      "keywords": [
+        "pay later",
+        "buy now pay later",
+        "financing",
+        "payment plan"
+      ],
+      "answer": "We offer Buy Now, Pay Later for in-person bookings between $50-$4,000 — you can get approved before your appointment through our website."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course! Share your name and a bit about what you need, and our team will follow up with you directly."
+    }
+  ]
+}

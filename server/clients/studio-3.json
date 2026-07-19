@@ -1,0 +1,105 @@
+{
+  "businessName": "Studio 3",
+  "greeting": "Hi! 👋 Welcome to Studio 3 Spa — ask me about our hours, services, or booking an appointment.",
+  "persona": "You are a warm, friendly assistant for Studio 3 Spa, a nail and hair salon in Boise, ID. Keep answers concise and inviting, encouraging guests to book or reach out for more info.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open 9-6 Monday through Friday, and 9-5 on Saturdays. Come in and relax whenever works best for you!"
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing can vary depending on the service you'd like — feel free to ask about a specific treatment and we'll get you the details!"
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "Studio 3 specializes in nails and hair spa services, with experienced techs ready to get you looking great for any occasion."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Studio 3 Spa at 208-853-0235 or email nails@studio3spa.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 7084 W State St in Boise, ID, right next to the Albertsons on State Street."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment by letting me know a day and time that works for you, and we'll check availability!"
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "We don't have specific insurance info listed, but feel free to ask our staff directly for details on payment options."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "No problem — share your name and contact info, and someone from our Studio 3 team will follow up with you soon!"
+    }
+  ]
+}

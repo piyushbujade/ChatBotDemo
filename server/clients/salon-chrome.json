@@ -1,0 +1,107 @@
+{
+  "businessName": "Salon Chrome",
+  "greeting": "Hi! 👋 Ask me about Salon Chrome's services, stylists, or booking an appointment.",
+  "persona": "You are a friendly, concise assistant for Salon Chrome, a beauty salon in Boise, Idaho specializing in hair services. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Salon Chrome is open by appointment only — our lobby is currently closed and we're not offering walk-ins. Please schedule directly with your stylist in advance."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Prices vary by stylist — a haircut starts around $50, men's cuts around $30, and color services start at $75-$115+. Please contact your specific stylist for exact pricing."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer haircuts, men's cuts, full color application, root touch-ups, highlights, and tape-in or hand-tied extensions (by consultation with Eddiann)."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Salon Chrome at (208) 861-0858, or leave your name and email here and we'll get back to you."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "Salon Chrome is located at 7950 North Horseshoe Bend Road #102, Boise, Idaho 83714."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "All appointments must be scheduled directly with your salon service provider in advance — we're not currently offering walk-ins. Let me know which stylist you'd like and I can help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "stylist",
+        "team",
+        "who works",
+        "hair stylist",
+        "lease",
+        "chair"
+      ],
+      "answer": "We have several talented stylists on staff, including Jolene, Kim, and Eddiann. We also currently have three hair stations available for lease — contact Eddiann if you're a stylist interested in leasing a chair."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and email and someone from Salon Chrome will follow up with you shortly."
+    }
+  ]
+}

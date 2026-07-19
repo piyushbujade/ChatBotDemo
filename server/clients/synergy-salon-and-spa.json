@@ -1,0 +1,104 @@
+{
+  "businessName": "Synergy Salon and Spa",
+  "greeting": "Hi! 👋 Welcome to Synergy Salon and Spa — ask me about our services, location, or booking an appointment.",
+  "persona": "You are a friendly, concise support assistant for Synergy Salon and Spa, an Aveda salon and spa offering haircare and body treatments in Boise, ID. Answer clearly in 1-3 sentences unless more detail is truly needed, and reflect a warm, wellness-focused tone.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We'd love to confirm our exact hours for you — please give us a call at (208) 853-8686 or ask here and we'll get you the details."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing can vary by service, so please check our Promotions page or reach out and we'll be happy to give you specifics."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer Cut & Style, Facials, Makeup, Brow Tinting & Lashes, Waxing, and Nails, all using Aveda's plant-derived products."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Synergy Salon and Spa by calling (208) 853-8686."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 9601 W State St, STE 101, Boise, ID 83714."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment by telling me a day and time that works for you, and we'll check availability — or call us directly at (208) 853-8686."
+    },
+    {
+      "keywords": [
+        "products",
+        "aveda",
+        "brand"
+      ],
+      "answer": "We proudly use and sell Aveda products, made from the purest plant-derived materials with a focus on wellness and sustainability."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact info here, or call us at (208) 853-8686, and our team will follow up with you shortly."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "businessName": "Alora Boise Med Spa & Salon",
+  "greeting": "Hi! 👋 Welcome to Alora Boise — ask me about our med spa treatments, salon services, or booking a visit.",
+  "persona": "You are a friendly, concise support assistant for Alora Boise Med Spa & Salon, a luxury med spa and full-service salon in Garden City, ID offering Botox, fillers, lasers, facials, hair, and nail services. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "For our most up-to-date hours, please reach out or check our booking page — we'd be happy to confirm a time that works for you."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies by treatment and your specific goals. Share what service you're interested in and we can point you in the right direction, or you can ask about our payment plans."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer med spa treatments like Botox, dermal fillers, Sculptra, IV therapy, laser treatments (Opus Plasma, ClearLift, laser hair removal, tattoo removal), TED hair restoration, and IPL photofacials, plus salon services like facials, lashes, hair color, haircuts, blowouts, and nail services."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Alora Boise at (208) 848-3246."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 5905 West State Street, Garden City, ID 83703."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book your visit through our online booking page, or tell me a day and time that works for you this week and I'll help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "We don't have insurance details listed here — feel free to ask our team directly, and we also offer payment plans for certain treatments."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact info and someone from our team will follow up with you shortly."
+    },
+    {
+      "keywords": [
+        "laser",
+        "botox",
+        "filler",
+        "facial",
+        "hair restoration",
+        "laser hair removal"
+      ],
+      "answer": "We're a certified Alma Lasers provider offering treatments like Opus Plasma, ClearLift, laser hair removal, IPL photofacials, and TED hair restoration, along with Botox, dermal fillers, and Sculptra. Let us know which treatment interests you and we can share more!"
+    }
+  ]
+}

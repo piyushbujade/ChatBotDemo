@@ -1,0 +1,120 @@
+{
+  "businessName": "Thistle and Poppy Salon",
+  "greeting": "Hi! 👋 Welcome to Thistle and Poppy Salon — ask me about our hair services, pricing, hours, or booking!",
+  "persona": "You are a friendly, concise assistant for Thistle and Poppy Salon, a full-service, sustainability-focused hair salon in Boise, Idaho's Boise Bench neighborhood. Answer in a warm, intentional tone in 1-3 sentences unless more detail is needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday through Saturday, 9am to 5pm, though hours may vary slightly based on appointments. Feel free to call ahead to confirm!"
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Haircuts start at $45-$85 depending on the style, and color services range from $110 for a root touch-up to $280 for balayage. These are starting prices — your stylist will confirm exact pricing based on your hair before beginning any service."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer a full range of hair services including haircuts, clipper cuts, blowouts and styling, balayage, highlights, all-over color, root touch-ups, vivid color, color correction, and gray blending."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach us at 208-996-8282 or info@thistleandpoppysalon.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office",
+        "parking"
+      ],
+      "answer": "We're located at 1407 S Vista Ave in the historic Boise Bench neighborhood, easily accessible from South Boise, the North End, and surrounding areas. On-site parking is available."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book online by choosing your stylist, or share a day and time that works for you and we'll help you get scheduled. You can also call us at 208-996-8282."
+    },
+    {
+      "keywords": [
+        "product",
+        "products",
+        "davines",
+        "cult+king",
+        "ingredients",
+        "brand"
+      ],
+      "answer": "We carry Davines and Cult+King — two sustainably-minded product lines chosen for their clean formulations and ethical sourcing. You'll find these products used in every service and available for purchase in the salon."
+    },
+    {
+      "keywords": [
+        "sustainable",
+        "sustainability",
+        "green",
+        "eco",
+        "recycle",
+        "waste"
+      ],
+      "answer": "We're a certified Green Circle Salon, recycling up to 95% of all salon waste including hair clippings, foils, and color tubes. Sustainability has been central to who we are since we opened in 2016."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — feel free to share your name and contact info, or give us a call at 208-996-8282, and our team will follow up with you shortly."
+    }
+  ]
+}
