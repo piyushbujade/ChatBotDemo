@@ -1,0 +1,111 @@
+{
+  "businessName": "No.45 Hairdressing",
+  "greeting": "Hi! 👋 Welcome to No.45 Hairdressing — ask me about our hours, services, or booking an appointment.",
+  "persona": "You are a friendly, concise support assistant for No.45 Hairdressing, an independent luxury hair salon in Oldfield Park, Bath. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:00",
+    "endTime": "17:30",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday to Wednesday 9am-5:30pm, Thursday 9am-8pm, Friday 9am-6pm, and Saturday 9am-4pm. We're closed on Sundays."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Our prices vary depending on the service and stylist level — please check our Prices page or ask me and I can help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer classic cuts and finishes, perms, technical colour services, hair extensions, Crown Pro Smoothing, and wedding hair styling."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach No.45 Hairdressing on 01225 448887 or at no45hairdressing@gmail.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at 45 Moorland Road, Bath, BA2 3PN, in the heart of Oldfield Park."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book online through our website, or tell me a day and time you'd like and I'll help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "extensions",
+        "hair extensions"
+      ],
+      "answer": "Our expert stylists offer personalised hair extension services for added length, volume, or colour, using high-quality extensions for natural, seamless results."
+    },
+    {
+      "keywords": [
+        "wedding",
+        "bridal"
+      ],
+      "answer": "Our wedding hair service includes personalised pre-wedding consultations and styling on the big day itself, so you can shine as you say 'I do'."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact details and our team will follow up with you shortly."
+    }
+  ]
+}

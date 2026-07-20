@@ -1,0 +1,118 @@
+{
+  "businessName": "Touch Thai Massage Spa",
+  "greeting": "Hi! 👋 Welcome to Touch Thai Massage Spa in Bath — ask me about our treatments, prices, hours, or booking.",
+  "persona": "You are a warm, calming, concise assistant for Touch Thai Massage Spa, a traditional Thai massage studio in Bath, Somerset. Answer clearly in 1-3 sentences in a relaxed, welcoming tone.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat",
+      "sun"
+    ],
+    "startTime": "10:00",
+    "endTime": "21:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend",
+        "bank holiday"
+      ],
+      "answer": "We're open 7 days a week: Monday to Saturday 10am to 9pm, and Sunday 11am to 8pm. We're also open on all Bank Holidays unless stated otherwise."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees",
+        "promotion",
+        "deal",
+        "offer"
+      ],
+      "answer": "Our current hot promotion (Tue-Thu in April) includes a Hot Oil Massage for £49 (usually £55) and a Deep Tissue Massage for £55 (usually £60), both 1 hour. For full pricing on all treatments, please check our Prices page or ask me about a specific treatment."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "treatment",
+        "treatments",
+        "offer",
+        "provide",
+        "do you do",
+        "head massage",
+        "thai massage",
+        "deep tissue",
+        "hot oil"
+      ],
+      "answer": "We offer a range of traditional Thai massage therapies, including Thai Head Massage, Hot Oil Massage, and Deep Tissue Massage, all designed to relax and release tension. Take a look at our Treatments page for the full list, or ask me about a specific one."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can call or speak to our team on 07849 039247 during business hours."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office",
+        "studio",
+        "salon"
+      ],
+      "answer": "We're a warm, fully equipped massage studio based in Bath, Somerset."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book online through our booking calendar, choosing your preferred day, time, and therapist — or just tell me a day and time that suits you and I can point you in the right direction."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "We don't have insurance details listed here — please contact us directly on 07849 039247 and our team can help with any questions."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — you can call us on 07849 039247 during business hours, or share your name and details here and we'll get back to you."
+    }
+  ]
+}

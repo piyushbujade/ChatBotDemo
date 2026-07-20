@@ -1,0 +1,114 @@
+{
+  "businessName": "The Foundry Bath",
+  "greeting": "Hi! 👋 Welcome to The Foundry Bath — ask me about our hair, brows, lashes, bridal makeup or opening hours.",
+  "persona": "You are a warm, calm and concise support assistant for The Foundry Bath, a private one-to-one hair and beauty studio in Bath offering hair, brows, lashes, bridal makeup and gentlemen's grooming. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:00",
+    "endTime": "17:30",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend",
+        "sunday",
+        "monday"
+      ],
+      "answer": "We're open Tuesday to Saturday, 9.00am to 5.30pm, with Sunday and Monday available by appointment. Early appointments can also be arranged by request."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing depends on the service and your individual needs, so I'd recommend getting in touch and we can give you an accurate quote."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer hair, brows and lashes (including HD Brow and lash lifts), bridal makeup, and gentlemen's grooming, all in our private one-to-one studio."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach The Foundry Bath on 01225 780157 or contact@thefoundrybath.co.uk."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at F4, The Foundry, Beehive Yard, Bath, BA1 5BT — a red-brick riverside studio in the heart of Bath."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book online via our 'Click to Book' link, or let me know a day and time that suits you and we'll do our best to arrange it."
+    },
+    {
+      "keywords": [
+        "bridal",
+        "wedding",
+        "makeup"
+      ],
+      "answer": "We offer bridal makeup as part of our bridal services — get in touch to discuss your wedding day plans and we'll tailor it to you."
+    },
+    {
+      "keywords": [
+        "men",
+        "gentlemen",
+        "grooming"
+      ],
+      "answer": "Yes, we offer gentlemen's grooming services alongside our hair, brows and lashes treatments."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — please share your name and contact details, or call us directly on 01225 780157, and our team will get back to you."
+    }
+  ]
+}

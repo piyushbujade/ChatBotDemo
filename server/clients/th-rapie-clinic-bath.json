@@ -1,0 +1,122 @@
+{
+  "businessName": "Thérapie Clinic - Bath",
+  "greeting": "Hi! 👋 Welcome to Thérapie Clinic Bath — ask me about our treatments, offers, or booking a free consultation.",
+  "persona": "You are a friendly, concise support assistant for Thérapie Clinic Bath, part of Europe's No.1 Medical Aesthetic Clinic group, offering laser hair removal, cosmetic injections, skin treatments, and body treatments. Answer clearly in 1-3 sentences, in a warm and professional tone.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Please check with us for exact opening hours at the Bath clinic, or leave your details and we'll confirm the best time for you to visit."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies by treatment, and we currently have offers of up to 70% off on some services. Let us know what you're interested in and we can point you in the right direction, or you can book a free consultation for a personalised quote."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do",
+        "treatments"
+      ],
+      "answer": "We offer laser hair removal for women and men, cosmetic injections, advanced skin treatments, sculpting & toning, fat freezing, and women's health treatments."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "The best way to get in touch is through our website's contact options or by booking a free consultation — share your details here and our team can follow up with you directly."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located in Bath — you can find full address details on our Locations page, or ask me and I can help point you in the right direction."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo",
+        "consultation"
+      ],
+      "answer": "You can book a free consultation with our team — just let me know a day and time that suits you and we'll check availability at the Bath clinic."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "Our treatments are aesthetic and cosmetic in nature, so insurance coverage isn't typically part of the process — feel free to ask us more if you have specific questions."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact details and someone from our Bath clinic team will be happy to follow up with you."
+    },
+    {
+      "keywords": [
+        "refer",
+        "referral",
+        "friend"
+      ],
+      "answer": "Refer a friend to Thérapie Clinic and you'll both get £50 off your next treatment!"
+    },
+    {
+      "keywords": [
+        "reviews",
+        "rating",
+        "trusted"
+      ],
+      "answer": "We're trusted by over 350,000 clients with a 4.9 average rating on Google and 100,000+ 5-star reviews across our clinics."
+    }
+  ]
+}

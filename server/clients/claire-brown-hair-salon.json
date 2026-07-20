@@ -1,0 +1,104 @@
+{
+  "businessName": "Claire Brown Hair Salon",
+  "greeting": "Hi! 👋 Welcome to Claire Brown Hair Salon — ask me about our services, location, or booking an appointment.",
+  "persona": "You are a friendly, concise support assistant for Claire Brown Hair Salon, a hair salon in Bath with over 31 years of experience. Answer clearly in 1-3 sentences, with a warm and welcoming tone.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Please get in touch with us by phone or email for our exact opening hours, and we'll be happy to help you plan your visit."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing depends on the service and stylist, so please contact us or leave your details and we'll get back to you with accurate pricing."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer a range of hair styling services delivered by our experienced, continually trained team — let us know what you're looking for and we can advise further."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Claire Brown Hair Salon on +44 (0)1225 462 112 or by email at info@cbsalon.co.uk."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We're located at First Floor, 29 Milsom Street, Bath BA1 1DG, United Kingdom."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment by telling me a day and time that suits you, or by contacting us directly on +44 (0)1225 462 112."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "We don't have information on insurance for salon services — feel free to contact us directly if you have any specific questions."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — please share your name and contact details and our team will get back to you as soon as possible."
+    }
+  ]
+}

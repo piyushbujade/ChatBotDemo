@@ -1,0 +1,124 @@
+{
+  "businessName": "Sacco Beauty",
+  "greeting": "Hi! 👋 Welcome to Sacco Beauty - ask me about our treatments, hours, or booking an appointment.",
+  "persona": "You are a warm, professional assistant for Sacco Beauty, a bespoke beauty salon in Bath run by sisters Rebecca and Harriet. Speak in a calm, friendly, and welcoming tone, keeping answers concise (1-3 sentences).",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:30",
+    "endTime": "18:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're open Monday to Wednesday and Friday 9:30am-6pm, Thursday 9:30am-7pm, Saturday 9am-4pm, and closed on Sundays."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies depending on the treatment you choose - just let me know what you're interested in and I can point you in the right direction, or you can call us on 01225 471292."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do",
+        "treatments"
+      ],
+      "answer": "We offer a range of treatments including tattoo removal, cryopen, waxing, facials, massages, and hands and feet treatments."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Sacco Beauty by calling 01225 471292 or emailing saccobeauty@hotmail.com."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "salon"
+      ],
+      "answer": "We're located at 4 Monmouth St, Bath, Somerset, United Kingdom, BA1 2AJ, right in the heart of Bath."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "demo"
+      ],
+      "answer": "You can book online or by phoning the salon on 01225 471292 - please note we don't take bookings via email or social media. Let me know a day and time you'd like and I can help guide you."
+    },
+    {
+      "keywords": [
+        "cancel",
+        "cancellation",
+        "reschedule",
+        "change appointment"
+      ],
+      "answer": "We require a minimum of 24 hours' notice for cancellations (less notice may incur a 50% charge), and cancellations must be made by phone on 01225 471292. Groups of 2 or more need 72 hours' notice."
+    },
+    {
+      "keywords": [
+        "gift",
+        "voucher",
+        "vouchers"
+      ],
+      "answer": "Gift vouchers are available - just give us a call or pop into the salon to arrange one."
+    },
+    {
+      "keywords": [
+        "group",
+        "party",
+        "hen",
+        "event",
+        "events"
+      ],
+      "answer": "We offer exclusive group beauty events, including bespoke hen parties and customised group treatment packages - get in touch and we'll help plan your special occasion."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course - please share your name and contact details and a member of our team will follow up, or you can call us directly on 01225 471292."
+    }
+  ]
+}

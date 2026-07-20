@@ -1,0 +1,107 @@
+{
+  "businessName": "Figo Hair Salon Bath",
+  "greeting": "Hi! 👋 Welcome to Figo Hair – ask me about our salons, services, or booking an appointment.",
+  "persona": "You are a warm, friendly assistant for Figo Hair, a group of hairdressing salons in Bath, Corsham, and Keynsham since 2003, focused on quality hairdressing, sustainability, and client satisfaction. Answer clearly and helpfully in 1-3 sentences.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Our exact opening hours vary a little by salon, so it's best to give us a call or ask here and we can confirm times for Bath, Corsham, or Keynsham."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Prices vary between our Bath, Keynsham, and Corsham salons and depend on the service and stylist. Let us know what you're after and we can point you in the right direction or you can check our prices page for full details."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer professional hairdressing services including cutting, colouring, hair-up, and specialist hair care advice, plus FigoMAN barbering in Keynsham. We use sustainable brands like Oway Organics, Davines, K18, and Wella."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can call our Bath salon on 01225 338 866, Corsham on 01225 584 080, or Keynsham on 01173 637 140 (FigoMAN on 01173 637 139)."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "We have three salons: Bath at 15 Margaret's Buildings, BA1 2LP; Corsham at The Pavilion, Wadswick Green, SN13 9FN; and Keynsham at The Chocolate Quarter, Trajectus Way, BS31 2GJ."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can request an appointment with us directly, and we recommend a free consultation with your stylist beforehand for any new service. Please note we require at least 48 hours' notice for cancellations or changes."
+    },
+    {
+      "keywords": [
+        "colour",
+        "coloring",
+        "colouring",
+        "allergy",
+        "patch test",
+        "sensitivity"
+      ],
+      "answer": "For colour services, we carry out a skin sensitivity test 48 hours prior to application as standard health and safety practice — it's quick and simple, and we're happy to book this in for you."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact details and one of our salon team will get back to you shortly."
+    }
+  ]
+}

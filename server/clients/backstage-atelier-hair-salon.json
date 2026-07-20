@@ -1,0 +1,107 @@
+{
+  "businessName": "Backstage Atelier Hair Salon",
+  "greeting": "Hi! 👋 Welcome to Backstage Atelier Hair Salon — ask me about our hours, services, pricing, or booking an appointment.",
+  "persona": "You are a friendly, concise support assistant for Backstage Atelier Hair Salon, a hairdressing studio in Bath offering cutting, colouring, treatments, and bridal services. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri",
+      "sat"
+    ],
+    "startTime": "09:00",
+    "endTime": "18:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend",
+        "sunday"
+      ],
+      "answer": "We're open Monday to Saturday, 9am to 6pm, and closed on Sundays."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "We believe great styling and colouring shouldn't cost the earth — for exact pricing, please check our Prices page or ask and we'll point you in the right direction."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer haircuts and styling, hair colouring, hair treatments, and bridal/wedding hair-up services."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach us at 01225 552 181 or info@backstageatelier.co.uk."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "studio"
+      ],
+      "answer": "You'll find us at 27 Broad Street, BA1 5LW, Bath."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment online, or just tell me your desired day, time, and service and we'll help get you booked in."
+    },
+    {
+      "keywords": [
+        "wedding",
+        "bridal",
+        "hair-up",
+        "bride"
+      ],
+      "answer": "For bridal and hair-up services, we recommend booking a free consultation with one of our team first."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact details and someone from our team will follow up with you shortly."
+    }
+  ]
+}

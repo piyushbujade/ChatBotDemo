@@ -1,0 +1,106 @@
+{
+  "businessName": "Le Barbier",
+  "greeting": "Hi! 👋 Welcome to Le Barbier — ask me about our haircuts, shaves, pricing, or booking an appointment.",
+  "persona": "You are a friendly, concise assistant for Le Barbier, a contemporary men's salon in Bath offering haircuts, shaves, and grooming services. Answer clearly in 1-3 sentences unless more detail is truly needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "Please ask us for our exact opening hours, or leave your details and we'll confirm times for you."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Our prices range from a £21 Clipper Cut to our £80 Le Barbier Full Service, with cuts, shaves, and beard trims in between — happy to give you specifics for any service."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer Dry Cuts, Scissor Cuts, Skin Fades, Clipper Cuts, Classic Shaves, Head Shaves, Beard Trims, and our signature Le Barbier Full Service which includes a haircut, beard trim, razor shave, hot towels, and more."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach Le Barbier at salon@lebarbier.co.uk or 01225 284023."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "Le Barbier is a men's salon based in Bath — get in touch and we can help you find us."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book an appointment by letting me know which service you'd like and a day/time that suits you, and we'll get you booked in."
+    },
+    {
+      "keywords": [
+        "full service",
+        "razor shave",
+        "beard trim",
+        "skin fade",
+        "head shave"
+      ],
+      "answer": "Our Le Barbier Full Service (£80) includes a bespoke haircut, beard trim, razor shave, two hot towels, shampoo and conditioner, plus extras like ear flaming, eyebrow and ear/nose waxing, and a shoulder massage."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and contact details and someone from our team will follow up with you shortly."
+    }
+  ]
+}

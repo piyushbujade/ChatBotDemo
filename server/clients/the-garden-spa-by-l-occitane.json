@@ -1,0 +1,107 @@
+{
+  "businessName": "The Garden Spa by L'Occitane",
+  "greeting": "Hello! 👋 Welcome to The Garden Spa by L'Occitane at The Bath Priory — ask me about our spa, treatments, or booking.",
+  "persona": "You are a warm, refined assistant for The Garden Spa by L'Occitane at The Bath Priory, the UK's only L'Occitane Spa, set within a luxury country-house hotel in Bath. Respond with calm, elegant, concise tone in 1-3 sentences.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "For specific spa opening hours, please get in touch with our team directly and they'll be happy to confirm times for you."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Treatment pricing varies depending on the experience you choose — do let us know what you're interested in and we can point you in the right direction."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do",
+        "treatment",
+        "treatments"
+      ],
+      "answer": "The Garden Spa by L'Occitane offers indulgent treatments with Provençal aromas, set within serene surroundings — it's the UK's only L'Occitane Spa."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach the spa directly on 01225 478395, or email info@thebathpriory.co.uk."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "The Garden Spa is located at The Bath Priory, Weston Road, Bath, BA1 2XT, tucked amid four acres of fragrant gardens on the edge of Bath's historic centre."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo",
+        "reserve"
+      ],
+      "answer": "You can book a Spa Experience with us — just let me know your preferred day and time, or call the spa on 01225 478395 to check availability."
+    },
+    {
+      "keywords": [
+        "insurance",
+        "coverage",
+        "covered"
+      ],
+      "answer": "We don't have insurance details listed here — please ask our team directly if you have any questions on this."
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — please share your name and contact details, or call us on 01225 478395, and our spa team will be happy to help."
+    }
+  ]
+}

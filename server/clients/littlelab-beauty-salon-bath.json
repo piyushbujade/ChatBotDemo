@@ -1,0 +1,123 @@
+{
+  "businessName": "Littlelab - Beauty Salon Bath",
+  "greeting": "Hi! 👋 Welcome to LittleLAB Bath — ask me about our makeup workshops, beauty salon services, or courses!",
+  "persona": "You are a warm, friendly assistant for LittleLAB, an award-winning makeup school and beauty studio in Bath, founded in 2012. The tone is welcoming, patient, and judgement-free, reflecting the 'Shy of Makeup' philosophy — answer clearly in 1-3 sentences unless more detail is needed.",
+  "businessHours": {
+    "days": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "fri"
+    ],
+    "startTime": "08:00",
+    "endTime": "17:00",
+    "slotMinutes": 60
+  },
+  "faq": [
+    {
+      "keywords": [
+        "hours",
+        "open",
+        "opening",
+        "close",
+        "closing",
+        "time",
+        "weekend"
+      ],
+      "answer": "We're based in the heart of Bath — for our exact opening hours, please ask and we'll confirm, or you can book online anytime."
+    },
+    {
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "how much",
+        "rates",
+        "fee",
+        "fees"
+      ],
+      "answer": "Pricing varies depending on the workshop, course, or salon service you're interested in — let us know what you'd like and we'll point you in the right direction."
+    },
+    {
+      "keywords": [
+        "service",
+        "services",
+        "offer",
+        "provide",
+        "do you do"
+      ],
+      "answer": "We offer confidence makeup workshops, professional makeup courses, bridal & hen makeup, and a beauty salon with nails, lashes, brows and makeup services."
+    },
+    {
+      "keywords": [
+        "contact",
+        "email",
+        "phone",
+        "call",
+        "reach",
+        "number"
+      ],
+      "answer": "You can reach LittleLAB at info@littlelab.co.uk or 01225 310849."
+    },
+    {
+      "keywords": [
+        "location",
+        "address",
+        "where",
+        "based",
+        "office"
+      ],
+      "answer": "LittleLAB is based in the heart of Bath — we'd love to welcome you into our studio."
+    },
+    {
+      "keywords": [
+        "appointment",
+        "book",
+        "booking",
+        "schedule",
+        "meeting",
+        "demo"
+      ],
+      "answer": "You can book workshops, courses, and salon services online, or tell me a day and time that works for you and we'll help arrange it."
+    },
+    {
+      "keywords": [
+        "course",
+        "training",
+        "professional",
+        "artist",
+        "learn makeup"
+      ],
+      "answer": "Our Pro Makeup Courses offer practical, portfolio-ready training for bridal and freelance artists, taught by working professionals."
+    },
+    {
+      "keywords": [
+        "bridal",
+        "wedding",
+        "hen",
+        "hen party"
+      ],
+      "answer": "We offer bridal trials, wedding day makeup, and hen party workshops to make your big day (or celebration) extra special."
+    },
+    {
+      "keywords": [
+        "voucher",
+        "gift",
+        "gift card"
+      ],
+      "answer": "Our gift vouchers can be used across workshops, salon services, and products — a great gift that actually gets used!"
+    },
+    {
+      "keywords": [
+        "human",
+        "agent",
+        "representative",
+        "someone",
+        "person",
+        "talk to"
+      ],
+      "answer": "Of course — share your name and email and someone from our friendly team will follow up with you shortly."
+    }
+  ]
+}
