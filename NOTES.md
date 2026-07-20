@@ -173,3 +173,9 @@ Also updated the "Upcoming Availability" widget's heading, which still said "Thi
 Added 19 real cold-email-lead configs to `server/clients/` — salons/spas in the Boise, ID area (e.g. `salon-chrome`, `divinely-polished`, `sport-clips-haircuts-of-southeast-boise`, full list in the commit). Before pushing: validated every file for valid JSON, required schema fields (`businessName`, `greeting`, `persona`, non-empty `faq`), `businessHours` present, filenames matching the `clientId` slug pattern (so they're actually reachable via `?client=<slug>`), and scanned for accidentally-embedded secrets — all clean. Pushed, Render redeployed, spot-checked several via `/api/client-config` and one full chat exchange (`salon-chrome`, pricing question) — content flows through correctly end-to-end.
 
 `acme-dental.json` (the throwaway test fixture from Stage 3) is still in the repo — worth deleting once these real clients are the only ones sent out, so it doesn't show up in any listing of "current clients."
+
+## Second batch: 32 more real client configs (Bath, UK)
+
+Same validation process as the first batch — all 32 passed (valid JSON, required fields, `businessHours`, valid slugs, no secrets). Salons/spas/clinics in Bath, England this time (e.g. `th-rapie-clinic-bath`, `the-garden-spa-by-l-occitane`, `russell-brooks-hairdressing-hairextensions` — full list in the commit). Non-ASCII business names (e.g. "Thérapie") correctly sanitize to valid slugs (`th-rapie-clinic-bath`) and round-trip correctly through the API with the accented character intact in `businessName`. Pushed, redeployed, spot-checked 6 of the 32 via `/api/client-config` plus one full chat exchange (`th-rapie-clinic-bath`, referral-discount question) — all correct.
+
+Total client configs now: 51 real + `default.json` + the `acme-dental.json` test fixture (still pending cleanup, per above).
